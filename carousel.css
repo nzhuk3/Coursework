@@ -1,0 +1,149 @@
+.carousel-item > a {
+    pointer-events: none;
+}
+
+a.enabled {
+    pointer-events: all;
+}
+
+.carousel {
+    min-height: 600px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: #1D1D1F;
+}
+
+.track-container {
+    transition: 1s;
+}
+
+.carousel > h1 {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-family: 'Raleway';
+    font-size: 50px;
+    font-weight: 300;
+    color: #F7F8F8;
+    z-index: 2;
+}
+
+.carousel:hover #blob {
+    opacity: 1;
+}
+
+
+
+#blob {
+    opacity: 0;
+    height: 70px;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transition: background-color 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    will-change: transform;
+    border: none;
+    pointer-events: none;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+#blob > img {
+    user-select: none;
+    width: 45%;
+    height: 45%;
+}
+
+.whiteblob {
+    background: #f1f1f1;
+}
+
+.whiteblob > img {
+    content: url(assets/svg/click.svg);
+}
+
+.redblob {
+    background: #ff0000;
+}
+
+.yellowblob {
+    background: yellow;
+}
+
+.greenblob {
+    background: green;
+}
+
+.invisible { 
+    visibility: hidden;
+}
+
+.blueblob {
+    background: rgb(165, 165, 255);
+    height: 100px;
+}
+
+.track-container {
+    width: 3840px;
+}
+
+.track {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: 1s;
+    background-color: #1D1D1F;
+}
+
+.carousel-item {
+    max-width: 1200px;
+    padding: 20px 40px;
+    user-select: none;
+}
+
+.carousel-item > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: none;
+    background-color: transparent;
+    color: transparent;
+}
+
+
+
+.blurred {
+    transition: 0.8s;
+    filter: brightness(70%) blur(2px);
+}
+
+.blurred:hover {
+    filter: none;
+}
+
+.darkblurred {
+    filter: brightness(70%) blur(2px);
+}
+
+.carousel-item > a > img {
+    border-radius: 30px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+    transition: 0.7s;
+}
+
+@media (width <= 720px) {
+    .carousel-item {
+        width: 300px;
+    }
+}
+
